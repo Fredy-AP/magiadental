@@ -1,0 +1,91 @@
+@import 'const';
+
+body {
+    background-color: $background;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    .main_header {
+        text-align: center;
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: $blueDark;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: $darker;
+            margin-bottom: 20px;
+        }
+    }
+
+    .container_main {
+        .cards {
+
+            padding: 1em;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .card {
+                position: relative;
+                background-color: $white;
+                width: 250px;
+                margin-top: 60px;
+
+
+                i {
+                    background-color: $blueDark;
+                    color: $background;
+                    width: 100px;
+                    height: 100px;
+                    font-size: 2rem;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -50px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                h2 {
+                    text-align: center;
+                    color: $blueDark;
+                    margin-top: 60px;
+                    padding: 0 1em;
+                }
+
+                p {
+                    text-align: center;
+                    color: $darker;
+                    padding: 1em;
+
+                    a {
+                        color: $blueDark;
+                        text-decoration: none;
+                        transition: .5s;
+
+                        &:hover {
+                            color: $sky;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

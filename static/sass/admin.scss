@@ -1,0 +1,101 @@
+@import 'const';
+
+body {
+    background-color: $background ;
+    padding: 1em;
+}
+
+.btn-add {
+    display: inline-block;
+    padding: .5em 1em;
+    background-color: $blueDark;
+    color: $background;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+    border: 1px solid $blueDark;
+    cursor: pointer;
+    margin-top: 1em;
+
+    &:hover {
+        background-color: transparent;
+        color: $blueDark;
+    }
+}
+
+.btn-logout {
+    display: inline-block;
+    padding: .5em 1em;
+    background-color: $danger;
+    color: $background;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+    border: 1px solid $danger;
+    cursor: pointer;
+    margin-top: 1em;
+
+    &:hover {
+        background-color: transparent;
+        color: $danger;
+    }
+}
+
+select,
+input,
+textarea {
+    width: 100%;
+    margin-top: 1em;
+    padding: 1em;
+    text-transform: uppercase;
+    border: 1px solid $blueDark;
+    border-radius: 5px;
+    background-color: $background;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+table {
+    text-transform: uppercase;
+}
+
+.btn-delete {
+    background-color: $danger;
+    color: $background;
+    border: 1px solid $danger;
+    padding: .5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+    margin-right: 1em;
+
+    &:hover {
+        background-color: transparent;
+        color: $danger;
+    }
+}
+
+.btn-edit {
+    background-color: $warning;
+    color: $background;
+    border: 1px solid $warning;
+    padding: .5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+
+    &:hover {
+        background-color: transparent;
+        color: $warning;
+    }
+}
+
+.table-container {
+    margin-top: 1em;
+}

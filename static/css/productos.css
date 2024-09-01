@@ -1,0 +1,213 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.header {
+  padding: 0.5em;
+}
+.header .content-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .content-menu .logo {
+  width: 100px;
+  height: 100px;
+}
+.header .content-menu .logo img {
+  width: 100%;
+  height: 100%;
+}
+.header .content-menu .nav {
+  position: relative;
+  z-index: 1000;
+}
+.header .content-menu .nav .btn-menu {
+  background-color: #E0E9F8;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 0 0.2em;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.header .content-menu .nav .btn-menu:hover {
+  background-color: #7E9AF4;
+}
+.header .content-menu .nav .nav-list {
+  position: absolute;
+  background-color: #140C74;
+  width: 0vw;
+  max-width: 0px;
+  right: 0px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.5s;
+  animation-direction: reverse;
+}
+.header .content-menu .nav .nav-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+.header .content-menu .nav .nav-list ul li {
+  display: inline-block;
+}
+.header .content-menu .nav .nav-list ul li a {
+  width: 100%;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding: 10px;
+  border: 1px solid transparent;
+}
+.header .content-menu .nav .nav-list ul li a:hover {
+  border: 1px solid #7E9AF4;
+}
+.header .content-menu .nav .nav-list ul li a.active {
+  background-color: #7E9AF4;
+}
+.header .content-menu .nav .nav-list.active {
+  width: 60vw;
+  max-width: 300px;
+}
+
+footer {
+  padding: 1em;
+  text-transform: capitalize;
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+footer p {
+  text-transform: capitalize;
+}
+footer .btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: #E0E9F8;
+  font-size: 2em;
+  padding: 0.2em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+  border: 1px solid #28a745;
+  z-index: 1;
+}
+footer .btn-whatsapp:hover {
+  background-color: transparent;
+  color: #28a745;
+}
+
+@media screen and (min-width: 768px) {
+  .header .content-menu .nav .btn-menu {
+    display: none;
+  }
+  .header .content-menu .nav .nav-list {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    max-width: none;
+    overflow: visible;
+  }
+  .header .content-menu .nav .nav-list ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+  .header .content-menu .nav .nav-list ul li a {
+    color: #111;
+  }
+  .header .content-menu .nav .nav-list ul li a:hover {
+    color: #333;
+    background-color: #7E9AF4;
+  }
+  .header .content-menu .nav .nav-list ul li a.active {
+    border-color: #7E9AF4;
+    background-color: transparent;
+  }
+}
+body {
+  background-color: #E0E9F8;
+}
+
+main .main_header {
+  text-align: center;
+}
+main .main_header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #140C74;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1em;
+}
+.container-card .card {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 1em;
+  overflow: hidden;
+  position: relative;
+}
+.container-card .card .card-circle {
+  background-color: #140C74;
+  color: #E0E9F8;
+  width: 300px;
+  height: 300px;
+  font-size: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+.container-card .card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+  border: 5px solid #f4f4f4;
+}
+.container-card .card h3 {
+  font-size: 0.8rem;
+  color: #140C74;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.container-card .card p {
+  font-size: 1rem;
+  color: #111;
+  margin-top: 20px;
+}
+.container-card .card .card-price {
+  font-size: 1.5rem;
+  color: #140C74;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 700;
+}

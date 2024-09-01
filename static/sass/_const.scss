@@ -1,0 +1,187 @@
+$background: #E0E9F8;
+$sky: #7E9AF4;
+$blueDark: #140C74;
+$black: #000000;
+$darker: #111;
+$dark: #333;
+$white: #fff;
+$light: #f4f4f4;
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$green: #28a745;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.header {
+    padding: .5em;
+
+    .content-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 100px;
+            height: 100px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .nav {
+            position: relative;
+            z-index: 1000;
+
+            .btn-menu {
+                background-color: $background;
+                border: none;
+                cursor: pointer;
+                font-size: 1.5em;
+                padding: 0 .2em;
+                border-radius: 5px;
+                box-shadow: 0 0 5px rgba($black, .5);
+
+                &:hover {
+                    background-color: $sky;
+                }
+            }
+
+            .nav-list {
+                position: absolute;
+                background-color: $blueDark;
+                width: 0vw;
+                max-width: 0px;
+                right: 0px;
+                border-radius: 5px;
+                overflow: hidden;
+                transition: .5s;
+                animation-direction: reverse;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 1em;
+
+                    li {
+                        display: inline-block;
+
+                        a {
+                            width: 100%;
+                            display: inline-block;
+                            color: $white;
+                            text-decoration: none;
+                            border-radius: 5px;
+                            transition: .5s;
+                            padding: 10px;
+                            border: 1px solid transparent;
+
+                            &:hover {
+                                border: 1px solid $sky;
+
+                            }
+
+                            &.active {
+                                background-color: $sky;
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    width: 60vw;
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding: 1em;
+    text-transform: capitalize;
+    font-size: .9em;
+    margin-bottom: 1em;
+
+    p {
+        text-transform: capitalize;
+    }
+
+    .btn-whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: $green;
+        color: $background;
+        font-size: 2em;
+        padding: .2em;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: .5s;
+        border: 1px solid $green;
+        z-index: 1;
+
+        &:hover {
+            background-color: transparent;
+            color: $green;
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        .content-menu {
+            .nav {
+                .btn-menu {
+                    display: none;
+                }
+
+                .nav-list {
+                    position: static;
+                    background-color: transparent;
+                    width: auto;
+                    max-width: none;
+                    overflow: visible;
+
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        margin: 0;
+
+                        li {
+
+                            a {
+                                color: $darker;
+
+                                &:hover {
+                                    color: $dark;
+                                    background-color: $sky;
+
+                                }
+
+                                &.active {
+                                    border-color: $sky;
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

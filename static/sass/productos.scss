@@ -1,0 +1,87 @@
+@import 'const';
+
+body {
+    background-color: $background;
+}
+
+main {
+    .main_header {
+        text-align: center;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: $blueDark;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+    }
+}
+
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em;
+
+    .card {
+        width: 250px;
+        background-color: $light;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        margin: 1em;
+        overflow: hidden;
+        position: relative;
+
+        .card-circle {
+            background-color: $blueDark;
+            color: $background;
+            width: 300px;
+            height: 300px;
+            font-size: 2rem;
+            border-radius: 50%;
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            z-index: 1;
+            transform: translateX(-50%);
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+            border-radius: 50%;
+            border: 5px solid $light;
+        }
+
+        h3 {
+            font-size: .8rem;
+            color: $blueDark;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: $darker;
+            margin-top: 20px;
+        }
+
+        .card-price {
+            font-size: 1.5rem;
+            color: $blueDark;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+}
